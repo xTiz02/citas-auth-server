@@ -118,7 +118,7 @@ public class HttpSecurityConfig {
 //
 //        );
         http.logout((logout) -> logout
-                .logoutSuccessUrl("http://localhost:5173/login")
+                .logoutSuccessUrl("http://localhost:5173/authorized?logout=logout_action")
                 .deleteCookies("JSESSIONID")
                 .clearAuthentication(true)
                 .invalidateHttpSession(true)
